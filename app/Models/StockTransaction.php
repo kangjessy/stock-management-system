@@ -16,13 +16,14 @@ class StockTransaction extends Model
      * @var list<string>
      */
     protected $fillable = [
+        'user_id',
         'product_id',
         'warehouse_id',
-        'user_id',
-        'type',
-        'quantity',
+        'reference_type',
         'reference_id',
-        'description',
+        'quantity',
+        'type',
+        'current_stock',
     ];
 
     public function product(): BelongsTo

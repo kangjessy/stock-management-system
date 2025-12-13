@@ -16,7 +16,7 @@ class Unit extends Model
      */
     protected $fillable = [
         'name',
-        'abbreviation',
+        // 'abbreviation',
     ];
 
     public function products()

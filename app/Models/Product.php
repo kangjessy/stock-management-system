@@ -5,6 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Category;
+use App\Models\Unit;
+use App\Models\Stock;
+use App\Models\StockTransaction;
 
 class Product extends Model
 {
@@ -17,12 +21,15 @@ class Product extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'name',
         'sku',
+        'name',
         'category_id',
         'unit_id',
-        'price',
         'description',
+        'image',
+        'price_in', // WAJIB ADA
+        'price_out', // WAJIB ADA
+        'reorder_point', // WAJIB ADA
     ];
 
     public function category(): BelongsTo
